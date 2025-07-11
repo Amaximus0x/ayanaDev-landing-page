@@ -1,9 +1,15 @@
 <script lang="ts">
 	import Header from './components/Header.svelte';
+	import ProductCard from './components/ProductCard.svelte';
 	
 	// TypeScript variables and logic go here
-	let title = "Building A Portfolio Of Essential Digital Products";
-	let description = "We're A Venture Studio Creating Apps That Solve Real Problems In Health, Learning, And Productivity. With Our First Products In Market And An Ambitious Roadmap Ahead, We're Systematically Building";
+	let title = "Ayana Dev Studio";
+	let description = "We're a venture studio creating apps that solve real problems in health, learning, and productivity. With our first products in market and an ambitious roadmap ahead, we're systematically building mobile-first solutions for everyday needs.";
+
+	// Sample product data
+	const handleProductAction = () => {
+		console.log('Product action clicked');
+	};
 </script>
 
 <svelte:head>
@@ -11,74 +17,72 @@
 	<meta name="description" content={description} />
 </svelte:head>
 
-<div class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-	<div class= "px-5">
+<div class="min-h-screen bg-light-bg-primary">
 		<!-- Fixed Header -->
 		<Header />
-	</div>
+
 	
 	<!-- Content with padding to account for fixed header -->
-	<!-- <div class="pt-36 md:pt-40"> -->
+	<div class="pt-[1px] md:pt-[1px]">
 	
 	<!-- Trusted By Section -->
-	<div class="w-full flex justify-center mt-[185px] mb-6">
-		<div class="pl-1 pr-3 py-1 bg-black/5 rounded-full outline outline-1 outline-offset-[-1px] outline-black/40 backdrop-blur-[2px] inline-flex justify-center items-center gap-1">
-			<img class="w-5 h-5 rounded-full border border-white" src="https://placehold.co/20x20" />
-			<img class="w-5 h-5 rounded-full border border-white" src="https://placehold.co/20x20" />
-			<img class="w-5 h-5 rounded-full border border-white" src="https://placehold.co/20x20" />
-			<img class="w-5 h-5 rounded-full border border-white" src="https://placehold.co/20x20" />
-			<div class="text-center text-black text-xs font-medium font-['Satoshi'] capitalize">Trusted By Thousands</div>
+	<div class="w-auto h-auto flex justify-center mt-[185px] md:mt-[225px] mb-6 md:mb-[15px]">
+		<div class="trusted-by-container inline-flex justify-center items-center gap-[4px] pl-[4px] pr-[12px] py-[4px] rounded-[30000px]  relative">
+			<div class="flex items-center -space-x-2">
+				<img class="w-5 h-5 rounded-full object-cover bg-[#D9D9D9] border border-1 border-white relative z-7" src="/avaters/avater-1.jpg" />
+				<img class="w-5 h-5 rounded-full object-cover bg-[#D9D9D9] border border-1 border-white relative z-8" src="/avaters/avater-2.jpg" />
+				<img class="w-5 h-5 rounded-full object-cover bg-[#D9D9D9] border border-1 border-white relative z-9" src="/avaters/avater-3.jpg" />
+				<img class="w-5 h-5 rounded-full object-cover bg-[#D9D9D9] border border-1 border-white relative z-10" src="/avaters/avater-4.jpg" />
+			</div>
+			<div class="text-center text-black text-small-xs font-sans">Trusted By Thousands</div>
 		</div>
 	</div>
 	
 	<!-- Hero Section -->
-	<section class="container mx-auto px-6 py-16 text-center">
-		<h1 class="text-5xl md:text-6xl font-bold text-gray-800 mb-6">
-			{title}
-		</h1>
-		<p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-			{description}
-		</p>
-		<div class="flex justify-center">
-			<button class="px-4 py-2 bg-black rounded-lg inline-flex justify-center items-center gap-2.5">
-				<div class="text-center text-white text-sm font-medium font-['Satoshi'] capitalize leading-snug">Explore our Apps</div>
-			</button>
+	<div class="flex flex-col justify-center items-center gap-10 md:gap-14 mx-5 md:ml-[143px] md:mr-[142px]">
+		<div class="flex flex-col justify-center items-center gap-4 md:gap-6">
+			<div class="text-center justify-start text-black text-h1-xs md:text-h1-lg font-sans capitalize">Building a Portfolio <br/>of Essential Digital Products</div>
+			<div class="md:w-[657px] md:h-auto">
+				<p class="text-black text-center text-small md:text-small-lg font-sans capitalize">
+					We're a venture studio creating apps that solve real problems in health, learning, and productivity. With our first products in market and an ambitious roadmap ahead, we're systematically building mobile-first solutions for everyday needs.
+				</p>
+			</div>
+					
 		</div>
-	</section>
+		<div class="px-4 py-2 md:px-6 md:py-4 bg-black rounded-lg inline-flex justify-center items-center gap-2.5">
+			<div class="text-center justify-center text-white text-small-medium md:text-small-lg font-sans capitalize">Explore our Apps</div>
+		</div>
+	</div>
 
-	<!-- Features Section -->
-	<section class="container mx-auto px-6 py-16">
-		<div class="grid md:grid-cols-3 gap-8">
-			<div class="bg-white p-8 rounded-xl shadow-lg">
-				<div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
-					<svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-					</svg>
-				</div>
-				<h3 class="text-xl font-semibold text-gray-800 mb-2">Fast Performance</h3>
-				<p class="text-gray-600">Built with modern technologies for lightning-fast performance and optimal user experience.</p>
+	<!-- Our Products Section -->
+	 <div class="flex flex-col justify-center items-center gap-4 md:gap-8 mx-5 md:ml-[97px] md:mr-[96px] mt-[71px] md:mt-[119px]">
+		<div class="text-center justify-center text-black text-h3-medium md:text-h2-medium font-sans capitalize">Products in Market</div>
+		 <div class="flex flex-col justify-center items-center gap-10">
+			<div class="w-full max-w-md md:max-w-lg">
+				<ProductCard
+					title="RootCause.my"
+					category="Health & Wellness"
+					description="Discover the emotional root of symptoms with personalised German New Medicine reports."
+					availability="Now available on App Store & Google Play"
+					stats="400 symptom lookups logged"
+					buttonText="Get Your Health Map"
+					imageUrl="/products/rootcause.png"
+					buttonAction={handleProductAction}
+				/>
 			</div>
-			
-			<div class="bg-white p-8 rounded-xl shadow-lg">
-				<div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
-					<svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4"></path>
-					</svg>
-				</div>
-				<h3 class="text-xl font-semibold text-gray-800 mb-2">Customizable</h3>
-				<p class="text-gray-600">Highly customizable solutions tailored to meet your specific business needs and requirements.</p>
-			</div>
-			
-			<div class="bg-white p-8 rounded-xl shadow-lg">
-				<div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
-					<svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-					</svg>
-				</div>
-				<h3 class="text-xl font-semibold text-gray-800 mb-2">Secure & Reliable</h3>
-				<p class="text-gray-600">Enterprise-grade security and reliability you can trust for your most important projects.</p>
-			</div>
-		</div>
-	</section>
-	<!-- </div> -->
+		 </div>
+	 </div>
+	 </div>
 </div> 
+
+<style>
+	.trusted-by-container {
+		position: relative;
+		background: rgba(0, 0, 0, 0.03);
+		border-radius: 30000px;
+		outline: 1px solid;
+		outline-color: linear-gradient(45deg, rgba(0, 0, 0, 0.39), rgba(255, 255, 255, 0.1));
+		outline-offset: -1px;
+		backdrop-filter: blur(2px);
+	}
+</style> 

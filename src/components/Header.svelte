@@ -21,7 +21,7 @@
   });
 </script>
 
-<header class="fixed top-0 z-50 bg-white p-2 md:p-4 rounded-lg md:rounded-2xl top-[60px] left-[20px] right-[20px] w-auto">
+<header class="fixed z-50 bg-white p-2 md:p-4 rounded-lg md:rounded-2xl top-[60px] left-[20px] right-[20px] md:top-[55px] md:left-[66px] md:right-[66.5px] w-auto">
   <div class="w-full mx-auto flex justify-between items-center">
     <!-- Logo -->
     <img 
