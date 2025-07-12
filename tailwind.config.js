@@ -52,7 +52,7 @@ export default {
         'h1-bold': ['77px', { lineHeight: '88px', fontWeight: '700' }],
         'h1-xl': ['77px', { lineHeight: '78px', fontWeight: '700' }],
         'h1-lg': ['72.46px', { lineHeight: '82px', fontWeight: '700' }],//
-        'h1-md': ['36px', { lineHeight: '44px', fontWeight: '700' }],
+        'h1-bold-lg': ['31px', { lineHeight: '100%', fontWeight: '400' }],
         'h1-sm-medium': ['32px', { lineHeight: '100%', fontWeight: '500' }],//
         'h1-sm-nunito': ['32px', { lineHeight: '44px', fontWeight: '700'}],
         'h1-xs': ['28px', { lineHeight: '32px', fontWeight: '700' }], //
@@ -70,7 +70,7 @@ export default {
         
         // Body Text Variants
         'body-lg': ['18px', { lineHeight: '26px', fontWeight: '500' }],
-        'body-italic': ['16px', { lineHeight: '28px', fontWeight: '400', fontStyle: 'italic' }],
+        'body-italic': ['16px', { lineHeight: '100%', fontWeight: '400', fontStyle: 'italic' }],
         'body-medium': ['16px', { lineHeight: '22px', fontWeight: '500' }],
         'body-bold': ['16px', { lineHeight: '24px', fontWeight: '700' }],
         'body-montserrat': ['16px', { lineHeight: '28px', fontWeight: '500' }],
@@ -88,6 +88,7 @@ export default {
 
         // Smallest Text Variants
         'mini': ['13px', { lineHeight: '100%', fontWeight: '400' }],//
+        'small-mini': ['14px', { lineHeight: '100%', fontWeight: '400' }],//
       },
     },
   },
