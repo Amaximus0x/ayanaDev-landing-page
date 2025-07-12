@@ -7,8 +7,8 @@
 	let description = "We're a venture studio creating apps that solve real problems in health, learning, and productivity. With our first products in market and an ambitious roadmap ahead, we're systematically building mobile-first solutions for everyday needs.";
 
 	// Sample product data
-	const handleProductAction = () => {
-		console.log('Product action clicked');
+	const handleProductAction = (productName: string) => {
+		console.log(`${productName} action clicked`);
 	};
 </script>
 
@@ -57,19 +57,66 @@
 	<!-- Our Products Section -->
 	 <div class="flex flex-col justify-center items-center gap-4 md:gap-8 mx-5 md:ml-[97px] md:mr-[96px] mt-[71px] md:mt-[119px]">
 		<div class="text-center justify-center text-black text-h3-medium md:text-h2-medium font-sans capitalize">Products in Market</div>
-		 <div class="flex flex-col justify-center items-center gap-10">
-			<div class="w-full max-w-md md:max-w-lg">
-				<ProductCard
-					title="RootCause.my"
-					category="Health & Wellness"
-					description="Discover the emotional root of symptoms with personalised German New Medicine reports."
-					availability="Now available on App Store & Google Play"
-					stats="400 symptom lookups logged"
-					buttonText="Get Your Health Map"
-					imageUrl="/products/rootcause.png"
-					buttonAction={handleProductAction}
-				/>
-			</div>
+		 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-x-6 md:gap-y-8 w-full">
+			<!-- RootCause.my -->
+			<ProductCard
+				title="RootCause.my"
+				category="Health & Wellness"
+				description="Discover the emotional root of symptoms with personalised German New Medicine reports."
+				availability="Now available on App Store & Google Play"
+				stats="400 symptom lookups logged"
+				buttonText="Get Your Health Map"
+				imageUrl="/products/rootcause.png"
+				buttonAction={() => handleProductAction('RootCause.my')}
+			/>
+			
+			<!-- ExpatPass -->
+			<ProductCard
+				title="ExpatPass"
+				category="Travel & Compliance"
+				description="Automate Visas, Residency Permits, And Document Reminders—Built For Remote Workers And Expat Families."
+				availability="MVP Live"
+				stats="400 Symptom Lookups Logged"
+				buttonText="Join Waitlist"
+				imageUrl="/products/expatpass.png"
+				buttonAction={() => handleProductAction('ExpatPass')}
+			/>
+			
+			<!-- Youversity -->
+			<ProductCard
+				title="Youversity"
+				category="Education & Learning"
+				description="Turn Any YouTube Playlist Into A Structured, Trackable Course In Seconds."
+				availability="Live Web App"
+				stats="Over 500 Courses Created By Early Educators"
+				buttonText="Start Building Your Course"
+				imageUrl="/products/youversity.png"
+				buttonAction={() => handleProductAction('Youversity')}
+			/>
+			
+			<!-- Patent Trail -->
+			<ProductCard
+				title="Patent Trail"
+				category="Research & Productivity"
+				description="AI-Powered Patent Exploration And Tracking—Find Gaps, And Trends In Seconds."
+				availability="MVP Live"
+				stats="Used By 40+ Indie Inventors & Startup CTOs"
+				buttonText="Track Patents"
+				imageUrl="/products/patenttrail.png"
+				buttonAction={() => handleProductAction('Patent Trail')}
+			/>
+			
+			<!-- Painpoint Viral -->
+			<ProductCard
+				title="Painpoint Viral"
+				category="SaaS Community Growth"
+				description="Transform Your Twitter Presence Into Authentic SaaS Growth With Real-Time Conversation Discovery And AI-Driven Engagement Tools."
+				availability="Coming Soon — Currently In Development"
+				stats=""
+				buttonText="Join Waitlist"
+				imageUrl="/products/painpointviral.png"
+				buttonAction={() => handleProductAction('Painpoint Viral')}
+			/>
 		 </div>
 	 </div>
 	 </div>
