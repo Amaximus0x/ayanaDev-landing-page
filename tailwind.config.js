@@ -64,8 +64,8 @@ export default {
         
         // Heading 3 Variants
         'h3': ['20px', { lineHeight: '100%', fontWeight: '400' }],
-        'h3-medium': ['20px', { lineHeight: '100%', fontWeight: '500' }],
-        'h3-bold': ['20px', { lineHeight: '100%', fontWeight: '700' }],
+        'h3-medium': ['20px', { lineHeight: '100%', fontWeight: '500' }],//
+        'h3-bold': ['20px', { lineHeight: '30px', fontWeight: '700' }],//
         'h3-xl': ['24px', { lineHeight: '100%', fontWeight: '600' }],
         
         // Body Text Variants
