@@ -16,9 +16,9 @@
 <footer class="w-full bg-light-bg-primary">
 	<div class="w-full inline-flex flex-col justify-start items-center md:items-start mb-10 md:gap-14 px-5 md:px-[97px] pt-[98px] md:pt-[110px]">
 		<!-- Main Content -->
-		<div class="w-full flex flex-col md:flex-row justify-start items-start md:items-center gap-8 md:gap-[159px]">
+		<div class="w-full flex flex-col md:flex-row justify-start items-start md:items-center gap-8 md:gap-[159px] lg:gap-auto">
 			<!-- Logo and Tagline -->
-			<div class="w-[312.1px] md:w-[400.13px] flex flex-col justify-start items-start gap-[12.48px] md:gap-4">
+			<div class="w-[312.1px] md:w-[451px] flex flex-col justify-start items-start gap-[12.48px] md:gap-4">
 				<img class="w-[208.42px] md:w-[257px] h-[67.87px] md:h-[87px]" src="/ayana-dev-logo.svg" alt="Ayana Dev Studio" />
 				<div class="w-full justify-start text-black text-[31.49px]/[37.79px] md:text-[40.37px]/[48.45px] font-bold font-sans capitalize md:leading-[48.45px] bg-gradient-to-r from-black to-[#7CCCCA] bg-clip-text text-transparent">
 					Crafting Tomorrow's Essential Apps.

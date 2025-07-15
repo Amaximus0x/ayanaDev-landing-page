@@ -6,7 +6,14 @@
 	export let stats: string;
 	export let buttonText: string;
 	export let imageUrl: string;
-	export let buttonAction: () => void = () => {};
+	export let bgcolor: string;
+	export let buttonUrl: string = "#";
+	
+	const handleButtonClick = () => {
+		if (buttonUrl && buttonUrl !== "#") {
+			window.open(buttonUrl, '_blank');
+		}
+	};
 </script>
 
 <div class=" p-2 rounded-2xl outline outline-1 outline-offset-[-1px] outline-black/5 inline-flex flex-col justify-start items-end gap-2.5">
@@ -56,7 +63,7 @@
 		<button 
 			class="self-stretch h-14 px-6 py-4 bg-black rounded-lg inline-flex justify-center items-center gap-2.5 hover:bg-gray-800 transition-colors duration-200"
 			class:mt-[3px]={!stats}
-			on:click={buttonAction}
+			on:click={handleButtonClick}
 		>
 		<!-- <button 
 			class="self-stretch h-14 px-6 py-4 bg-black rounded-lg inline-flex justify-center items-center gap-2.5 hover:bg-gray-800 transition-colors duration-200"

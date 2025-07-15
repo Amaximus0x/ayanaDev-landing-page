@@ -8,11 +8,6 @@
 	let description =
 		"We're a venture studio creating apps that solve real problems in health, learning, and productivity. With our first products in market and an ambitious roadmap ahead, we're systematically building mobile-first solutions for everyday needs.";
 
-	// Sample product data
-	const handleProductAction = (productName: string) => {
-		console.log(`${productName} action clicked`);
-	};
-
 	const isMobile = window.innerWidth < 768;
 	
 	// Email subscription
@@ -121,7 +116,8 @@
 					stats="400 symptom lookups logged"
 					buttonText="Get Your Health Map"
 					imageUrl="/products/rootcause.png"
-					buttonAction={() => handleProductAction("RootCause.my")}
+					bgcolor =""
+					buttonUrl="https://rootcause.my"
 				/>
 
 				<!-- ExpatPass -->
@@ -132,8 +128,9 @@
 					availability="MVP Live"
 					stats="400 Symptom Lookups Logged"
 					buttonText="Join Waitlist"
-					imageUrl="/products/expatpass.png"
-					buttonAction={() => handleProductAction("ExpatPass")}
+					imageUrl="/products/expatpass-web.svg"
+					bgcolor="#4495ED1A"
+					buttonUrl="https://expatpass.io"
 				/>
 
 				<!-- Youversity -->
@@ -144,8 +141,9 @@
 					availability="Live Web App"
 					stats="Over 500 Courses Created By Early Educators"
 					buttonText="Start Building Your Course"
-					imageUrl="/products/youversity.png"
-					buttonAction={() => handleProductAction("Youversity")}
+					imageUrl="/products/youversity-web.svg"
+					bgcolor="#7CCCCA0F"
+					buttonUrl="https://youversity.io"
 				/>
 
 				<!-- Patent Trail -->
@@ -156,8 +154,9 @@
 					availability="MVP Live"
 					stats="Used By 40+ Indie Inventors & Startup CTOs"
 					buttonText="Track Patents"
-					imageUrl="/products/patenttrail.png"
-					buttonAction={() => handleProductAction("Patent Trail")}
+					imageUrl="/products/patenttrail-web.svg"
+					bgcolor = "#2E88890F"
+					buttonUrl="https://patenttrail.com"
 				/>
 
 				<!-- Painpoint Viral -->
@@ -168,8 +167,9 @@
 					availability="Coming Soon — Currently In Development"
 					stats=""
 					buttonText="Join Waitlist"
-					imageUrl="/products/painpointviral.png"
-					buttonAction={() => handleProductAction("Painpoint Viral")}
+					imageUrl="/products/painpointviral-web.svg"
+					bgcolor="#ED223E0F"
+					buttonUrl="https://painpointviral.com"
 				/>
 
 				<div class="w-full flex justify-center items-center">
@@ -246,6 +246,15 @@
 		<!-- Let's Talk Section -->
 		<div class="flex flex-col justify-center items-center gap-6 md:gap-8 mx-5 md:ml-[97px] md:mr-[96px] mt-[64px] md:mt-[113px]">
 			<div class="w-full max-w-[384px] md:max-w-[1247px] h-96 relative bg-black/5 rounded-lg overflow-hidden">
+				<!-- Gradient Background -->
+				<div class="absolute top-0 right-0 w-[300px] h-[200px] md:w-[500px] md:h-[300px] pointer-events-none">
+					<img 
+						src="/gradient-background.svg" 
+						alt="" 
+						class="w-full h-full object-cover opacity-60"
+					/>
+				</div>
+				
 				<!-- Decorative background element -->
 				<div class="w-52 h-52 md:w-[359.0623px] md:h-[359.0618px] left-[2px] md:left-[0px] top-[221px] md:top-[94px] absolute overflow-hidden">
 					{#if isMobile}
