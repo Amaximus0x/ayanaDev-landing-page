@@ -14,9 +14,9 @@
 </script>
 
 <footer class="w-full bg-light-bg-primary">
-	<div class="w-full inline-flex flex-col justify-start items-center md:items-start mb-10 md:gap-14 px-5 md:px-[97px] pt-[98px] md:pt-[110px]">
+	<div class="w-full flex flex-col justify-center items-center mb-10 md:gap-14 px-5 md:px-[97px] pt-[98px] md:pt-[110px]">
 		<!-- Main Content -->
-		<div class="w-full flex flex-col md:flex-row justify-start items-start md:items-center gap-8 md:gap-[159px] lg:gap-auto">
+		<div class="w-full max-w-7xl flex flex-col md:flex-row justify-center items-start md:items-center gap-8 md:gap-[159px] lg:gap-auto">
 			<!-- Logo and Tagline -->
 			<div class="w-[312.1px] md:w-[451px] flex flex-col justify-start items-start gap-[12.48px] md:gap-4">
 				<img class="w-[208.42px] md:w-[257px] h-[67.87px] md:h-[87px]" src="/ayana-dev-logo.svg" alt="Ayana Dev Studio" />
@@ -75,7 +75,7 @@
 		
 	</div>
     <!-- Copyright -->
-    <div class="w-full px-2.5 pt-2.5 pb-8 border-t border-black/20 inline-flex justify-center items-center gap-2.5">
+    <div class="w-full px-2.5 pt-2.5 pb-8 border-t border-black/20 flex justify-center items-center gap-2.5">
         <div class="text-center justify-start text-black text-base/[30px] font-normal font-sans">
             © 2025 Ayana Dev Studio
         </div>
