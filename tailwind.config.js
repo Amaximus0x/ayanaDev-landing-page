@@ -82,7 +82,7 @@ export default {
         'small-bold': ['14px', { lineHeight: '22px', fontWeight: '700' }],
         'small-italic': ['14px', { lineHeight: '28px', fontWeight: '400', fontStyle: 'italic' }],
         'small': ['12px', { lineHeight: '20px', fontWeight: '500' }],//
-        'small-lg': ['16px', { lineHeight: '100%', fontWeight: '500' }],//
+        'small-lg': ['16px', {  fontWeight: '500' }],//
         'small-xs': ['12px', { lineHeight: '100%', fontWeight: '500' }],//
 
 

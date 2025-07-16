@@ -33,63 +33,37 @@
 		<div
 			class="w-auto h-auto flex justify-center mt-[185px] md:mt-[225px] mb-6 md:mb-[15px]"
 		>
-			<!-- <div
-				class="inline-flex justify-center items-center gap-[4px] pl-[4px] pr-[12px] py-[4px] rounded-[30000px] relative bg-[#00000008]"
-			>
-				<div class="flex items-center -space-x-2">
-					<img
-						class="w-5 h-5 rounded-full object-cover bg-[#D9D9D9] border border-1 border-white relative z-7"
-						src="/avaters/avater-1.jpg"
-					/>
-					<img
-						class="w-5 h-5 rounded-full object-cover bg-[#D9D9D9] border border-1 border-white relative z-8"
-						src="/avaters/avater-2.jpg"
-					/>
-					<img
-						class="w-5 h-5 rounded-full object-cover bg-[#D9D9D9] border border-1 border-white relative z-9"
-						src="/avaters/avater-3.jpg"
-					/>
-					<img
-						class="w-5 h-5 rounded-full object-cover bg-[#D9D9D9] border border-1 border-white relative z-10"
-						src="/avaters/avater-4.jpg"
-					/>
-				</div>
-				<div class="text-center text-black text-small-xs font-sans">
-					Trusted By Thousands
-				</div>
-			</div> -->
 			<div
-  class="p-[2px] rounded-full"
-  style="background: linear-gradient(to right, rgba(0, 0, 0, 0.39), rgba(255, 255, 255, 0));"
->
-  <div
-    class="flex items-center gap-[4px] pl-[4px] pr-[12px] py-[4px] rounded-full"
-    style="background-color: rgba(255, 255, 255, 0.9);"
-  >
-    <div class="flex items-center -space-x-2">
-      <img
-        class="w-8 h-8 rounded-full object-cover border-2 border-white"
-        src="/avaters/avater-1.jpg"
-      />
-      <img
-        class="w-8 h-8 rounded-full object-cover border-2 border-white"
-        src="/avaters/avater-2.jpg"
-      />
-      <img
-        class="w-8 h-8 rounded-full object-cover border-2 border-white"
-        src="/avaters/avater-3.jpg"
-      />
-      <img
-        class="w-8 h-8 rounded-full object-cover border-2 border-white"
-        src="/avaters/avater-4.jpg"
-      />
-    </div>
-    <div class="text-black text-base font-medium ml-2">
-      Trusted By Thousands
-    </div>
-  </div>
-</div>
-
+				class="p-[2px] rounded-full"
+				style="background: linear-gradient(to right, rgba(0, 0, 0, 0.39), rgba(255, 255, 255, 0));"
+			>
+				<div
+					class="flex items-center gap-[4px] pl-[4px] pr-[12px] py-[4px] rounded-full"
+					style="background-color: rgba(255, 255, 255, 0.9);"
+				>
+					<div class="flex items-center -space-x-2">
+						<img
+							class="w-8 h-8 rounded-full object-cover border-2 border-white"
+							src="/avaters/avater-1.jpg"
+						/>
+						<img
+							class="w-8 h-8 rounded-full object-cover border-2 border-white"
+							src="/avaters/avater-2.jpg"
+						/>
+						<img
+							class="w-8 h-8 rounded-full object-cover border-2 border-white"
+							src="/avaters/avater-3.jpg"
+						/>
+						<img
+							class="w-8 h-8 rounded-full object-cover border-2 border-white"
+							src="/avaters/avater-4.jpg"
+						/>
+					</div>
+					<div class="text-black text-base font-medium ml-2">
+						Trusted By Thousands
+					</div>
+				</div>
+			</div>
 		</div>
 
 		<!-- Hero Section -->
