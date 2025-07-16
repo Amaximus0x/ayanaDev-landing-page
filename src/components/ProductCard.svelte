@@ -15,7 +15,7 @@
 	};
 </script>
 
-<div class=" p-2 rounded-2xl outline outline-1 outline-offset-[-1px] outline-black/5 inline-flex flex-col justify-start items-end gap-2.5">
+<div class="max-w-[400px] max-h-[476px] p-2 rounded-2xl outline outline-1 outline-offset-[-1px] outline-black/5 inline-flex flex-col justify-start items-end gap-2.5">
 	<!-- Image Container -->
 	<div class="self-stretch h-56 relative  rounded-lg outline outline-1 outline-offset-[-1px] outline-black/5 overflow-hidden">
 		<img 
