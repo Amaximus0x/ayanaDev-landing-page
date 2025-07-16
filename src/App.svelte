@@ -199,9 +199,9 @@
 					buttonUrl="https://painpointviral.com"
 				/>
 
-				<div class="w-full flex justify-center items-center">
+				<div class="max-w-[400px] flex justify-center items-center">
 					<p
-						class="text-start text-black text-h3 md:text-h1-bold-lg font-sans italic"
+						class=" text-start text-black text-h3 md:text-h1-bold-lg font-sans italic"
 					>
 						Currently Building Multiple Products Across Fintech And
 						Productivity Tools To Strengthen Our Growing Ecosystem.
