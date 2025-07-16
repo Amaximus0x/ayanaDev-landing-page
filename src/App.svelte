@@ -415,8 +415,9 @@
 					</div>
 
 					<!-- Get in Touch Button -->
-					<div
-						class="px-3 py-2 md:px-6 md:py-4 bg-black rounded-lg inline-flex justify-center items-center gap-2.5"
+					<a
+						href="mailto:team@ayanadestudio.com"
+						class="px-3 py-2 md:px-6 md:py-4 bg-black rounded-lg inline-flex justify-center items-center gap-2.5 hover:bg-gray-800 transition-colors duration-200 cursor-pointer"
 					>
 						<div
 							class="text-center justify-start text-white text-small-mini md:text-small-lg font-medium font-sans capitalize"
@@ -437,7 +438,7 @@
 								/>
 							</svg>
 						</div>
-					</div>
+					</a>
 				</div>
 
 				<!-- Let's Talk Title -->
