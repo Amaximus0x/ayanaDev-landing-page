@@ -6,7 +6,6 @@
 	export let stats: string;
 	export let buttonText: string;
 	export let imageUrl: string;
-	export let bgcolor: string;
 	export let buttonUrl: string = "#";
 	
 	const handleButtonClick = () => {
@@ -18,7 +17,7 @@
 
 <div class=" p-2 rounded-2xl outline outline-1 outline-offset-[-1px] outline-black/5 inline-flex flex-col justify-start items-end gap-2.5">
 	<!-- Image Container -->
-	<div class="self-stretch h-56 relative bg-neutral-300 rounded-lg outline outline-1 outline-offset-[-1px] outline-black/5 overflow-hidden">
+	<div class="self-stretch h-56 relative  rounded-lg outline outline-1 outline-offset-[-1px] outline-black/5 overflow-hidden">
 		<img 
 			class="w-[424.76px] h-[240.85px] object-cover" 
 			src={imageUrl} 
