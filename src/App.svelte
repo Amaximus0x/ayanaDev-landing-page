@@ -203,11 +203,8 @@
 					to build a portfolio of apps that millions rely on daily.
 				</p>
 			</div>
-			{#if isMobile}
-				<img src="/how-we-build-mobile.svg" alt="how we build" />
-			{:else}
-				<img src="/how-we-build-ls.svg" alt="how we build" />
-			{/if}
+				<img src="/how-we-build-mobile.svg" alt="how we build"  class="block md:hidden"/>
+				<img src="/how-we-build-ls.svg" alt="how we build" class="hidden md:block"/>
 		</div>
 
 		<!-- Where We're Heading -->
@@ -229,23 +226,23 @@
 					to build a portfolio of apps that millions rely on daily.
 				</p>
 			</div>
-			{#if isMobile}
 				<img
 					src="/where-we-heading-mobile.svg"
 					alt="Where we heading"
+					class="w-full h-auto object-contain block md:hidden"
 				/>
-			{:else}
-				<div class="flex items-center justify-center gap-2">
+				<div class="hidden md:flex md:items-center md:justify-center gap-2 w-full">
 					<img
 						src="/where-we-heading-ls-1.svg"
 						alt="Where we are Heading ls 1"
+						class="w-full h-auto object-contain max-w-[50%]"
 					/>
 					<img
 						src="/where-we-heading-ls-2.svg"
 						alt="Where we are Heading ls 2"
+						class="w-full h-auto object-contain max-w-[50%]"
 					/>
 				</div>
-			{/if}
 		</div>
 
 		<!-- Follow Our Journey Section -->
@@ -285,7 +282,7 @@
 			class="flex flex-col justify-center items-center gap-6 md:gap-8 mx-5 md:ml-[97px] md:mr-[96px] mt-[64px] md:mt-[113px]"
 		>
 			<div
-				class="w-full max-w-[384px] md:max-w-[1247px] h-96 relative bg-black/5 rounded-lg overflow-hidden"
+				class="w-full max-w-[384px] md:max-w-[1247px] h-[430px] relative bg-black/5 rounded-lg overflow-hidden"
 			>
 				<!-- Gradient Background -->
 				<div
@@ -300,7 +297,7 @@
 
 				<!-- Decorative background element -->
 				<div
-					class="w-52 h-52 md:w-[359.0623px] md:h-[359.0618px] left-[2px] md:left-[0px] top-[221px] md:top-[94px] absolute overflow-hidden"
+					class="w-52 h-52 md:w-[359.0623px] md:h-[359.0618px] left-[2px] md:left-[0px] top-[221px] md:top-[140px] absolute overflow-hidden"
 				>
 					{#if isMobile}
 						<svg
@@ -343,12 +340,12 @@
 						<!-- Early Adopters -->
 						<div class="flex flex-col gap-1">
 							<div
-								class="text-right text-black text-h3-medium font-light italic md:text-h2-medium font-sans capitalize"
+								class="text-right text-black text-h3-medium font-light italic md:text-[24px] font-sans capitalize"
 							>
 								Early Adopters
 							</div>
 							<div
-								class="text-right text-black font-light text-small-mini md:text-small-lg font-sans capitalize"
+								class="text-right text-black font-light text-small-mini md:text-[16px] font-sans capitalize"
 							>
 								Be first to try our new apps. Join our beta
 								community for exclusive access and direct input
@@ -359,12 +356,12 @@
 						<!-- Strategic Partners -->
 						<div class="flex flex-col gap-1">
 							<div
-								class="text-right text-black text-h3-medium font-light italic md:text-h2-medium font-sans capitalize"
+								class="text-right text-black text-h3-medium font-light italic md:text-[24px] font-sans capitalize"
 							>
 								Strategic Partners
 							</div>
 							<div
-								class="text-right text-black font-light text-small-mini md:text-small-lg font-sans capitalize"
+								class="text-right text-black font-light text-small-mini md:text-[16px] font-sans capitalize"
 							>
 								Be first to try our new apps. Join our beta
 								community for exclusive access and direct input
@@ -375,12 +372,12 @@
 						<!-- Exceptional Opportunities -->
 						<div class="flex flex-col gap-1">
 							<div
-								class="text-right text-black text-h3-medium font-light italic md:text-h2-medium font-sans capitalize"
+								class="text-right text-black text-h3-medium font-light italic md:text-[24px] font-sans capitalize"
 							>
 								Exceptional Opportunities
 							</div>
 							<div
-								class="text-right text-black font-light text-small-mini md:text-small-lg font-sans capitalize"
+								class="text-right text-black font-light text-small-mini md:text-[16px] font-sans capitalize"
 							>
 								While focused on our own products, we're open to
 								exploring unique collaborations.

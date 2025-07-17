@@ -43,15 +43,15 @@
 				<div class="self-stretch justify-start text-black text-mini italic font-sans capitalize">
 					{description}
 				</div>
-				<div class="self-stretch flex flex-col justify-start items-start gap-1">
+				<div class="self-stretch flex flex-col justify-start items-start gap-1 pl-1.5">
 					<div class="self-stretch inline-flex justify-start items-center gap-4">
 						<div class="justify-start text-black text-small-xs font-sans capitalize">
-							{availability}
+							<li>{availability}</li>
 						</div>
 					</div>
 					{#if stats}
 						<div class="self-stretch justify-start text-black text-small-xs font-sans capitalize">
-							{stats}
+							<li>{stats}</li>
 						</div>
 					{/if}
 				</div>
