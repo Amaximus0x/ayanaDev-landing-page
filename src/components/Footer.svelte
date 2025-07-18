@@ -8,8 +8,8 @@
 	];
 
 	const socialLinks = [
-		{ name: "Twitter/X", url: "#" },
-		{ name: "LinkedIn", url: "#" }
+		{ name: "Twitter/X", url: "https://twitter.com/AyanaDevs" },
+		{ name: "LinkedIn", url: "https://www.linkedin.com/company/ayana-dev-studio" }
 	];
 </script>
 
@@ -34,24 +34,24 @@
 					</div>
 					<div class="self-stretch flex flex-col md:inline-flex md:flex-row justify-start items-start gap-4">
 						<div class="flex flex-col justify-start items-start gap-4">
-							<div class="self-stretch justify-start">
+							<a href="https://rootcause.my" class="self-stretch justify-start">
 								<span class="text-black text-base/[100%] font-normal font-sans">RootCause - </span>
 								<span class="text-black text-base/[100%] font-light italic font-sans">Health & Wellness</span>
-							</div>
-							<div class="self-stretch justify-start">
+							</a>
+							<a href="https://expatpass.io" class="self-stretch justify-start">
 								<span class="text-black text-base/[100%] font-normal font-sans">ExpatPass - </span>
 								<span class="text-black text-base/[100%] font-light italic font-sans">Travel Compliance</span>
-							</div>
+							</a>
 						</div>
 						<div class="flex flex-col justify-start items-start gap-4">
-							<div class="justify-start">
+							<a href="https://patenttrail.com" class="justify-start">
 								<span class="text-black text-base/[100%] font-normal font-sans">Patent Trail - </span>
 								<span class="text-black text-base/[100%] font-light italic font-sans">Innovation Access</span>
-							</div>
-							<div class="justify-start">
+							</a>
+							<a href="https://youversity.io" class="justify-start">
 								<span class="text-black text-base/[100%] font-normal font-sans">Youversity - </span>
 								<span class="text-black text-base/[100%] font-light italic font-sans">Education & Learning</span>
-							</div>
+							</a>
 						</div>
 					</div>
 				</div>

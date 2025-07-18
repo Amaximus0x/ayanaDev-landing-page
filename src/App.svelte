@@ -6,7 +6,7 @@
 	// TypeScript variables and logic go here
 	let title = "Ayana Dev Studio";
 	let description =
-		"We're a venture studio creating apps that solve real problems in health, learning, and productivity. With our first products in market and an ambitious roadmap ahead, we're systematically building mobile-first solutions for everyday needs.";
+		"Ayana Dev Studio creates innovative apps for the modern world, solving real-world problems with user-focused solutions.";
 
 	const isMobile = window.innerWidth < 768;
 
@@ -387,7 +387,7 @@
 
 					<!-- Get in Touch Button -->
 					<a
-						href="mailto:team@ayanadestudio.com"
+						href="mailto:info@ayanadevstudio.com"
 						class="px-3 py-2 md:px-6 md:py-4 bg-black rounded-lg inline-flex justify-center items-center gap-2.5 hover:bg-gray-800 transition-colors duration-200 cursor-pointer"
 					>
 						<div
