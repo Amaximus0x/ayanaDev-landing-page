@@ -12,9 +12,92 @@
 
 	// Email subscription
 	let email = "";
-	const handleEmailSubmit = () => {
-		console.log("Email submitted:", email);
-		// Handle email submission logic here
+	let isSubmitting = false;
+	let submitMessage = "";
+	let submitMessageType: "success" | "error" | "" = "";
+
+	// Email validation function
+	const isValidEmail = (email: string): boolean => {
+		const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+		return emailRegex.test(email);
+	};
+
+	// Klaviyo subscription function using Vercel serverless function
+	const subscribeToKlaviyo = async (email: string): Promise<boolean> => {
+		try {
+			const response = await fetch('/api/subscribe', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify({ email })
+			});
+
+			if (!response.ok) {
+				const errorData = await response.json();
+				console.error('Subscription Error:', errorData);
+				return false;
+			}
+
+			return true;
+		} catch (error) {
+			console.error('Error subscribing to newsletter:', error);
+			return false;
+		}
+	};
+
+	// Handle email submission
+	const handleEmailSubmit = async () => {
+		// Reset previous messages
+		submitMessage = "";
+		submitMessageType = "";
+
+		// Validate email
+		if (!email.trim()) {
+			submitMessage = "Please enter your email address.";
+			submitMessageType = "error";
+			return;
+		}
+
+		if (!isValidEmail(email)) {
+			submitMessage = "Please enter a valid email address.";
+			submitMessageType = "error";
+			return;
+		}
+
+		// Set loading state
+		isSubmitting = true;
+
+		try {
+			const success = await subscribeToKlaviyo(email);
+			
+			if (success) {
+				submitMessage = "Thank you! You've been successfully subscribed to our updates.";
+				submitMessageType = "success";
+				email = ""; // Clear the input
+			} else {
+				submitMessage = "Sorry, there was an error subscribing. Please try again.";
+				submitMessageType = "error";
+			}
+		} catch (error) {
+			submitMessage = "Sorry, there was an error subscribing. Please try again.";
+			submitMessageType = "error";
+		} finally {
+			isSubmitting = false;
+		}
+
+		// Clear message after 5 seconds
+		setTimeout(() => {
+			submitMessage = "";
+			submitMessageType = "";
+		}, 5000);
+	};
+
+	// Handle Enter key press
+	const handleKeyPress = (event: KeyboardEvent) => {
+		if (event.key === 'Enter') {
+			handleEmailSubmit();
+		}
 	};
 </script>
 
@@ -267,14 +350,23 @@
 					bind:value={email}
 					placeholder="Enter your email updates"
 					class="flex-1 px-4 py-3 bg-white/50 border border-black/10 rounded-lg rounded-r-none text-black text-small-mini md:text-small-medium-lg placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-black/20 font-sans font-medium"
+					on:keypress={handleKeyPress}
 				/>
 				<button
 					on:click={handleEmailSubmit}
 					class="px-6 py-3 md:py-4 bg-black text-white text-small-mini md:text-small-medium-lg rounded-lg rounded-l-none hover:bg-gray-800 transition-colors duration-200 font-sans font-medium md:capitalize"
+					disabled={isSubmitting}
 				>
-					Send
+					{isSubmitting ? 'Submitting...' : 'Send'}
 				</button>
 			</div>
+
+			<!-- Submit Message -->
+			{#if submitMessage}
+				<div class="mt-4 text-center text-small-mini md:text-small-medium-lg font-sans" class:text-green-600={submitMessageType === 'success'} class:text-red-600={submitMessageType === 'error'}>
+					{submitMessage}
+				</div>
+			{/if}
 		</div>
 
 		<!-- Let's Talk Section -->
