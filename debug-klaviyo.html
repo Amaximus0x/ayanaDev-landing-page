@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Klaviyo Debug Test</title>
+</head>
+<body>
+    <h1>Klaviyo List Test</h1>
+    <form action="https://manage.kmail-lists.com/subscriptions/subscribe" method="POST">
+        <input type="hidden" name="g" value="YvHmkS">
+        <input type="email" name="email" placeholder="Enter email" required>
+        <button type="submit">Test Subscribe</button>
+    </form>
+    
+    <h2>Alternative Methods</h2>
+    <button onclick="testSubscription()">Test Method 1</button>
+    <button onclick="testMethod2()">Test Method 2</button>
+    <button onclick="testMethod3()">Test Method 3</button>
+    
+    <script>
+    function testSubscription() {
+        const email = prompt('Enter email to test:');
+        if (!email) return;
+        
+        const formData = new URLSearchParams();
+        formData.append('g', 'YvHmkS');
+        formData.append('email', email);
+        
+        fetch('https://manage.kmail-lists.com/subscriptions/subscribe', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: formData,
+            mode: 'no-cors'
+        }).then(() => {
+            alert('Method 1 sent! Check your Klaviyo list.');
+        }).catch(error => {
+            console.error('Error:', error);
+            alert('Error: ' + error.message);
+        });
+    }
+    
+    function testMethod2() {
+        const email = prompt('Enter email to test:');
+        if (!email) return;
+        
+        const formData = new URLSearchParams();
+        formData.append('g', 'YvHmkS');
+        formData.append('email', email);
+        
+        fetch('https://manage.kmail-lists.com/ajax/subscriptions/subscribe', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: formData,
+            mode: 'no-cors'
+        }).then(() => {
+            alert('Method 2 sent! Check your Klaviyo list.');
+        }).catch(error => {
+            console.error('Error:', error);
+            alert('Error: ' + error.message);
+        });
+    }
+    
+    function testMethod3() {
+        const email = prompt('Enter email to test:');
+        if (!email) return;
+        
+        // Create a hidden form and submit it
+        const form = document.createElement('form');
+        form.action = 'https://manage.kmail-lists.com/subscriptions/subscribe';
+        form.method = 'POST';
+        form.target = '_blank';
+        
+        const listInput = document.createElement('input');
+        listInput.type = 'hidden';
+        listInput.name = 'g';
+        listInput.value = 'YvHmkS';
+        
+        const emailInput = document.createElement('input');
+        emailInput.type = 'hidden';
+        emailInput.name = 'email';
+        emailInput.value = email;
+        
+        form.appendChild(listInput);
+        form.appendChild(emailInput);
+        
+        document.body.appendChild(form);
+        form.submit();
+        document.body.removeChild(form);
+        
+        alert('Method 3 sent via form submission!');
+    }
+    </script>
+</body>
+</html> 
