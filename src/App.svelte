@@ -2,6 +2,7 @@
 	import Header from "./components/Header.svelte";
 	import ProductCard from "./components/ProductCard.svelte";
 	import Footer from "./components/Footer.svelte";
+	import klaviyoService from "./services/klaviyo";
 
 	// TypeScript variables and logic go here
 	let title = "Ayana Dev Studio";
@@ -10,11 +11,47 @@
 
 	const isMobile = window.innerWidth < 768;
 
-	// Email subscription
+	// Email subscription state
 	let email = "";
-	const handleEmailSubmit = () => {
-		console.log("Email submitted:", email);
-		// Handle email submission logic here
+	let isSubmitting = false;
+	let submissionMessage = "";
+	let submissionType: "success" | "error" | "" = "";
+
+	const handleEmailSubmit = async () => {
+		if (!email.trim()) {
+			submissionMessage = "Please enter your email address.";
+			submissionType = "error";
+			return;
+		}
+
+		isSubmitting = true;
+		submissionMessage = "";
+		submissionType = "";
+
+		try {
+			const result = await klaviyoService.subscribeEmail(email.trim());
+			
+			if (result.success) {
+				submissionMessage = result.message;
+				submissionType = "success";
+				email = ""; // Clear the input on success
+			} else {
+				submissionMessage = result.message;
+				submissionType = "error";
+			}
+		} catch (error) {
+			console.error("Email submission error:", error);
+			submissionMessage = "Something went wrong. Please try again later.";
+			submissionType = "error";
+		} finally {
+			isSubmitting = false;
+			
+			// Clear message after 5 seconds
+			setTimeout(() => {
+				submissionMessage = "";
+				submissionType = "";
+			}, 5000);
+		}
 	};
 </script>
 
@@ -261,19 +298,46 @@
 			</div>
 
 			<!-- Email Input Section -->
-			<div class="flex md:w-[473px] md:gap-0 items-center justify-center">
-				<input
-					type="email"
-					bind:value={email}
-					placeholder="Enter your email updates"
-					class="flex-1 px-4 py-3 bg-white/50 border border-black/10 rounded-lg rounded-r-none text-black text-small-mini md:text-small-medium-lg placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-black/20 font-sans font-medium"
-				/>
-				<button
-					on:click={handleEmailSubmit}
-					class="px-6 py-3 md:py-4 bg-black text-white text-small-mini md:text-small-medium-lg rounded-lg rounded-l-none hover:bg-gray-800 transition-colors duration-200 font-sans font-medium md:capitalize"
-				>
-					Send
-				</button>
+			<div class="flex flex-col items-center gap-3">
+				<div class="flex md:w-[473px] md:gap-0 items-center justify-center">
+					<input
+						type="email"
+						bind:value={email}
+						placeholder="Enter your email updates"
+						disabled={isSubmitting}
+						class="flex-1 px-4 py-3 bg-white/50 border border-black/10 rounded-lg rounded-r-none text-black text-small-mini md:text-small-medium-lg placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-black/20 font-sans font-medium disabled:opacity-50 disabled:cursor-not-allowed"
+					/>
+					<button
+						on:click={handleEmailSubmit}
+						disabled={isSubmitting}
+						class="px-6 py-3 md:py-4 bg-black text-white text-small-mini md:text-small-medium-lg rounded-lg rounded-l-none hover:bg-gray-800 transition-colors duration-200 font-sans font-medium md:capitalize disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-black flex items-center gap-2"
+					>
+						{#if isSubmitting}
+							<svg class="animate-spin h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+								<circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+								<path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+							</svg>
+							Sending...
+						{:else}
+							Send
+						{/if}
+					</button>
+				</div>
+				
+				<!-- Success/Error Message -->
+				{#if submissionMessage}
+					<div 
+						class="text-center text-small-mini md:text-small-medium font-sans font-medium px-4 py-2 rounded-lg transition-opacity duration-300 border"
+						class:text-green-700={submissionType === "success"}
+						class:bg-green-50={submissionType === "success"}
+						class:border-green-200={submissionType === "success"}
+						class:text-red-700={submissionType === "error"}
+						class:bg-red-50={submissionType === "error"}
+						class:border-red-200={submissionType === "error"}
+					>
+						{submissionMessage}
+					</div>
+				{/if}
 			</div>
 		</div>
 
