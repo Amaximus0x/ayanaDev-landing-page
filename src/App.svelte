@@ -131,6 +131,7 @@
 				class="px-4 py-2 md:px-6 md:py-4 bg-black rounded-lg inline-flex justify-center items-center gap-2.5"
 			>
 				<div
+					id="products-section"
 					class="text-center justify-center text-white text-small-medium md:text-small-lg font-sans capitalize"
 				>
 					Explore our Apps
@@ -140,6 +141,7 @@
 
 		<!-- Our Products Section -->
 		<div
+			
 			class="flex flex-col justify-center items-center gap-4 md:gap-8 mx-5 md:ml-[97px] md:mr-[96px] mt-[71px] md:mt-[119px]"
 		>
 			<div
@@ -298,7 +300,7 @@
 			</div>
 
 			<!-- Email Input Section -->
-			<div class="flex flex-col items-center gap-3">
+			<div id="contact-section" class="flex flex-col items-center gap-3">
 				<div class="flex md:w-[473px] md:gap-0 items-center justify-center">
 					<input
 						type="email"
