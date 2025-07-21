@@ -18,15 +18,15 @@
 		<!-- Main Content -->
 		<div class="w-full max-w-7xl flex flex-col md:flex-row justify-center items-start md:items-center gap-8 md:gap-[159px] lg:gap-auto">
 			<!-- Logo and Tagline -->
-			<div class="w-[312.1px] md:w-[451px] flex flex-col justify-start items-start gap-[12.48px] md:gap-4">
+			<div class="w-[312.1px] md:w-[401px] flex flex-col justify-start items-start gap-[12.48px] md:gap-4">
 				<img class="w-[208.42px] md:w-[257px] h-[67.87px] md:h-[87px]" src="/ayana-dev-logo.svg" alt="Ayana Dev Studio" />
-				<div class="w-full justify-start text-black text-[31.49px]/[37.79px] md:text-[40.37px]/[48.45px] font-bold font-sans capitalize md:leading-[48.45px] bg-gradient-to-r from-black to-[#7CCCCA] bg-clip-text text-transparent">
-					Crafting Tomorrow's Essential Apps.
+				<div class="w-full md:w-[401px] justify-start text-black text-[31.49px]/[37.79px] md:text-[40.37px]/[48.45px] font-bold font-sans capitalize md:leading-[48.45px] bg-gradient-to-r from-black to-[#7CCCCA] bg-clip-text text-transparent">
+					Crafting Tomorrow's<br> Essential Apps.
 				</div>
 			</div>
 			
 			<!-- Navigation Sections -->
-			<div class="w-full md:w-[815px] flex flex-col md:flex-row justify-start items-start md:items-center gap-8 md:gap-[86px]">
+			<div class="w-full md:w-[815px] flex flex-col md:flex-row justify-start items-start md:items-center md:justify-between gap-8 md:gap-[86px]">
 				<!-- Our Apps Section -->
 				<div class="flex flex-col justify-start items-start gap-6">
 					<div class="self-stretch justify-start text-black text-h3-bold md:text-[24px] font-sans">
@@ -57,8 +57,8 @@
 				</div>
 				
 				<!-- Connect Section -->
-				<div class="flex flex-col justify-start items-start gap-6">
-					<div class="self-stretch justify-start text-black text-h3-bold md:text-[24px] font-bold font-sans leading-loose">
+				<div class="flex flex-col justify-start items-start gap-6 h-[114px]">
+					<div class="self-stretch justify-start text-black text-h3-bold md:text-[24px] font-sans">
 						Connect
 					</div>
 					<div class="self-stretch flex flex-col justify-start items-start gap-4">
