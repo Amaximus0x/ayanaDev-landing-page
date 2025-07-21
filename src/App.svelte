@@ -75,8 +75,7 @@
 				style="background: linear-gradient(to right, rgba(0, 0, 0, 0.39), rgba(255, 255, 255, 0));"
 			>
 				<div
-					class="flex items-center gap-[4px] pl-[4px] pr-[12px] py-[4px] rounded-full"
-					style="background-color: rgba(255, 255, 255, 0.9);"
+					class="flex items-center gap-[4px] pl-[4px] pr-[12px] py-[4px] rounded-full bg-white/90"
 				>
 					<div class="flex items-center -space-x-2">
 						<img
@@ -96,7 +95,7 @@
 							src="/avaters/avater-4.jpg"
 						/>
 					</div>
-					<div class="text-black text-base font-medium ml-2">
+					<div class="text-black text-base font-medium">
 						Trusted By Thousands
 					</div>
 				</div>
@@ -294,20 +293,20 @@
 				>
 					Follow Our Journey
 				</div>
-				<div class="text-body-italic font-sans capitalize">
+				<div class="text-body-italic italic font-sans capitalize">
 					Get notified when we launch new apps
 				</div>
 			</div>
 
 			<!-- Email Input Section -->
-			<div id="contact-section" class="flex flex-col items-center gap-3">
-				<div class="flex md:w-[473px] md:gap-0 items-center justify-center">
+			<div id="contact-section" class="w-full flex flex-col items-center gap-3">
+				<div class="w-full flex md:w-[473px] md:gap-0 items-center justify-center">
 					<input
 						type="email"
 						bind:value={email}
 						placeholder="Enter your email updates"
 						disabled={isSubmitting}
-						class="flex-1 px-4 py-3 bg-white/50 border border-black/10 rounded-lg rounded-r-none text-black text-small-mini md:text-small-medium-lg placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-black/20 font-sans font-medium disabled:opacity-50 disabled:cursor-not-allowed"
+						class="flex-1 px-4 py-3 md:py-[15px] bg-white/50 border border-black/10 rounded-lg rounded-r-none text-black text-small-mini md:text-small-medium-lg placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-black/20 font-sans font-medium disabled:opacity-50 disabled:cursor-not-allowed"
 					/>
 					<button
 						on:click={handleEmailSubmit}
@@ -485,4 +484,65 @@
 
 <!-- Footer -->
 <Footer />
+
+
+<!-- <div class="w-[229px] h-[225px] absolute top-[526px] left-[201px] bottom-[4613px]">
+	<svg xmlns="http://www.w3.org/2000/svg" width="430" height="1225" viewBox="0 0 430 1225" fill="none">
+		<g filter="url(#filter0_f_7578_1208)">
+		  <ellipse cx="315.5" cy="612.5" rx="114.5" ry="112.5" fill="#EF3E72" fill-opacity="0.3"/>
+		</g>
+		<defs>
+		  <filter id="filter0_f_7578_1208" x="-299" y="0" width="1229" height="1225" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+			<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+			<feGaussianBlur stdDeviation="250" result="effect1_foregroundBlur_7578_1208"/>
+		  </filter>
+		</defs>
+	</svg>
+</div> -->
+<!-- <div class="hidden md:block w-[229px] h-[225px] absolute top-[526px] left-[1264px] right-[-53px] bottom-[3602px]">
+	<svg xmlns="http://www.w3.org/2000/svg" width="676" height="1225" viewBox="0 0 676 1225" fill="none">
+		<g filter="url(#filter0_f_7511_88442)">
+		  <ellipse cx="614.5" cy="612.5" rx="114.5" ry="112.5" fill="#EF3E72" fill-opacity="0.6"/>
+		</g>
+		<defs>
+		  <filter id="filter0_f_7511_88442" x="0" y="0" width="1229" height="1225" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+			<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+			<feGaussianBlur stdDeviation="250" result="effect1_foregroundBlur_7511_88442"/>
+		  </filter>
+		</defs>
+	  </svg>
+</div> -->
+<div class="hidden md:block w-[229px] h-[225px] absolute top-[582px] left-[12px] right-[1199px] bottom-[3546px] blur-[250px]">
+	<svg xmlns="http://www.w3.org/2000/svg" width="741" height="1225" viewBox="0 0 741 1225" fill="none">
+		<g filter="url(#filter0_f_7511_88441)">
+		  <ellipse cx="126.5" cy="612.5" rx="114.5" ry="112.5" fill="#7CCCCA"/>
+		</g>
+		<defs>
+		  <filter id="filter0_f_7511_88441" x="-488" y="0" width="1229" height="1225" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+			<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+			<feGaussianBlur stdDeviation="250" result="effect1_foregroundBlur_7511_88441"/>
+		  </filter>
+		</defs>
+	  </svg>
+</div>
+
+
+<!-- <div class="hidden md:block w-[229px] h-[225px] absolute top-[3234px] left-[625px] right-[586px] bottom-[894px] rounded-full">
+	<svg xmlns="http://www.w3.org/2000/svg" width="676" height="1225" viewBox="0 0 676 1225" fill="none">
+		<g filter="url(#filter0_f_7511_88442)">
+		  <ellipse cx="614.5" cy="612.5" rx="114.5" ry="112.5" fill="#EF3E72" fill-opacity="0.6"/>
+		</g>
+		<defs>
+		  <filter id="filter0_f_7511_88442" x="0" y="0" width="1229" height="1225" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+			<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+			<feGaussianBlur stdDeviation="250" result="effect1_foregroundBlur_7511_88442"/>
+		  </filter>
+		</defs>
+	  </svg>
+</div> -->
+
 

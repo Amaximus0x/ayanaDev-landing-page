@@ -36,7 +36,8 @@
   }
 </script>
 
-<header class="fixed z-50 bg-white p-2 md:p-4 rounded-lg md:rounded-2xl top-[60px] left-[20px] right-[20px] md:top-[55px] md:left-[66px] md:right-[66.5px] w-auto">
+<!-- <header class="fixed z-50 bg-white p-2 md:p-4 rounded-lg md:rounded-2xl top-[60px] left-[20px] right-[20px] md:top-[55px] md:left-[66px] md:right-[66.5px] w-auto"> -->
+<header class="fixed z-50 bg-white px-5 py-4 md:px-14 md:pt-8 md:pb-6 rounded-lg md:rounded-2xl  w-full">
   <div class="w-full mx-auto flex justify-between items-center">
     <!-- Logo -->
     <img 

@@ -1,14 +1,14 @@
 <script lang="ts">
 	// Footer data
 	const apps = [
-		{ name: "RootCause", category: "Health & Wellness" },
-		{ name: "ExpatPass", category: "Travel Compliance" },
-		{ name: "Patent Trail", category: "Innovation Access" },
-		{ name: "Youversity", category: "Education & Learning" }
+		{ name: "RootCause", category: "Health & Wellness", url: "https://rootcause.my" },
+		{ name: "ExpatPass", category: "Travel Compliance", url: "https://expatpass.io" },
+		{ name: "Patent Trail", category: "Innovation Access", url: "https://patenttrail.com" },
+		{ name: "Youversity", category: "Education & Learning", url: "https://youversity.io" }
 	];
 
 	const socialLinks = [
-		{ name: "Twitter/X", url: "https://twitter.com/AyanaDevs" },
+		{ name: "Twitter", url: "https://twitter.com/AyanaDevs" },
 		{ name: "LinkedIn", url: "https://www.linkedin.com/company/ayana-dev-studio" }
 	];
 </script>
@@ -34,23 +34,23 @@
 					</div>
 					<div class="self-stretch flex flex-col md:inline-flex md:flex-row justify-start items-start gap-4">
 						<div class="flex flex-col justify-start items-start gap-4">
-							<a href="https://rootcause.my" class="self-stretch justify-start">
-								<span class="text-black text-base/[100%] font-normal font-sans">RootCause - </span>
-								<span class="text-black text-base/[100%] font-light italic font-sans">Health & Wellness</span>
+							<a href={apps[0].url} class="self-stretch justify-start">
+								<span class="text-black text-base/[100%] font-normal font-sans">{apps[0].name} - </span>
+								<span class="text-black text-base/[100%] font-light italic font-sans">{apps[0].category}</span>
 							</a>
-							<a href="https://expatpass.io" class="self-stretch justify-start">
-								<span class="text-black text-base/[100%] font-normal font-sans">ExpatPass - </span>
-								<span class="text-black text-base/[100%] font-light italic font-sans">Travel Compliance</span>
+							<a href={apps[1].url} class="self-stretch justify-start">
+								<span class="text-black text-base/[100%] font-normal font-sans">{apps[1].name} - </span>
+								<span class="text-black text-base/[100%] font-light italic font-sans">{apps[1].category}</span>
 							</a>
 						</div>
 						<div class="flex flex-col justify-start items-start gap-4">
-							<a href="https://patenttrail.com" class="justify-start">
-								<span class="text-black text-base/[100%] font-normal font-sans">Patent Trail - </span>
-								<span class="text-black text-base/[100%] font-light italic font-sans">Innovation Access</span>
+							<a href={apps[2].url} class="justify-start">
+								<span class="text-black text-base/[100%] font-normal font-sans">{apps[2].name} - </span>
+								<span class="text-black text-base/[100%] font-light italic font-sans">{apps[2].category}</span>
 							</a>
-							<a href="https://youversity.io" class="justify-start">
-								<span class="text-black text-base/[100%] font-normal font-sans">Youversity - </span>
-								<span class="text-black text-base/[100%] font-light italic font-sans">Education & Learning</span>
+							<a href={apps[3].url} class="justify-start">
+								<span class="text-black text-base/[100%] font-normal font-sans">{apps[3].name} - </span>
+								<span class="text-black text-base/[100%] font-light italic font-sans">{apps[3].category}</span>
 							</a>
 						</div>
 					</div>
@@ -62,12 +62,12 @@
 						Connect
 					</div>
 					<div class="self-stretch flex flex-col justify-start items-start gap-4">
-						<div class="self-stretch justify-start text-black text-base/[100%] font-normal font-sans">
-							Twitter/X
-						</div>
-						<div class="self-stretch justify-start text-black text-base/[100%] font-normal font-sans">
-							LinkedIn
-						</div>
+						<a href={socialLinks[0].url} class="self-stretch justify-start text-black text-base/[100%] font-normal font-sans">
+							{socialLinks[0].name}
+						</a>
+						<a href={socialLinks[1].url} class="self-stretch justify-start text-black text-base/[100%] font-normal font-sans">
+							{socialLinks[1].name}
+						</a>
 					</div>
 				</div>
 			</div>
