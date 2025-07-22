@@ -1,4 +1,8 @@
 <script lang="ts">
+	import { createEventDispatcher } from 'svelte';
+	
+	const dispatch = createEventDispatcher();
+
 	// Footer data
 	const apps = [
 		{ name: "RootCause", category: "Health & Wellness", url: "https://rootcause.my" },
@@ -11,6 +15,10 @@
 		{ name: "Twitter", url: "https://twitter.com/AyanaDevs" },
 		{ name: "LinkedIn", url: "https://www.linkedin.com/company/ayana-dev-studio" }
 	];
+
+	const handlePrivacyPolicyClick = () => {
+		dispatch('privacy-policy-click');
+	};
 </script>
 
 <footer class="w-full bg-light-bg-primary">
@@ -75,9 +83,17 @@
 		
 	</div>
     <!-- Copyright -->
-    <div class="w-full px-2.5 pt-2.5 pb-8 border-t border-black/20 flex justify-center items-center gap-2.5">
+    <div class="w-full px-5 md:px-[96px] pt-2.5 pb-8 border-t border-black/20 flex flex-row justify-between items-center">
         <div class="text-center justify-start text-black text-base/[30px] font-normal font-sans">
             © 2025 Ayana Dev Studio
+        </div>
+        <div class="flex items-center gap-4 text-base/[30px] font-normal font-sans">
+            <button
+                on:click={handlePrivacyPolicyClick}
+                class="text-black hover:text-black transition-colors underline font-sans"
+            >
+                Privacy Policy
+            </button>
         </div>
     </div>
 </footer> 
