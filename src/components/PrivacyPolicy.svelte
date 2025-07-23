@@ -25,7 +25,7 @@
 		<!-- Modal content -->
 		<div class="bg-white rounded-lg shadow-xl max-w-4xl w-full max-h-[90vh] flex flex-col">
 			<!-- Header -->
-			<div class="flex-shrink-0 bg-white border-b px-6 py-4 flex items-center justify-between">
+			<div class="flex-shrink-0 bg-white border-b px-6 py-4 flex items-center justify-between rounded-lg">
 				<h2 id="privacy-policy-title" class="text-2xl font-bold text-black">Privacy Policy</h2>
 				<button
 					on:click={closeModal}
@@ -122,7 +122,7 @@
 			</div>
 
 			<!-- Footer -->
-			<div class="flex-shrink-0 bg-white border-t px-6 py-4 flex justify-end">
+			<div class="flex-shrink-0 bg-white border-t px-6 py-4 flex justify-end rounded-lg">
 				<button
 					on:click={closeModal}
 					class="px-6 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors"
