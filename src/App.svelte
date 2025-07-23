@@ -76,8 +76,8 @@
 	<div class="relative pt-[1px] md:pt-[1px]">
 		
 		<!-- Pink Gradient Background for Hero/Products -->
-		<div class="absolute right-[-53px] pointer-events-none z-0 hidden md:block">
-			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 676 1225" fill="none" class="w-[676px] h-[1225px]">
+		<div class="absolute right-0 top-0 pointer-events-none z-0 hidden md:block overflow-hidden">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 676 1225" fill="none" class="w-[676px] h-[1225px] max-h-screen">
 				<g filter="url(#filter0_f_7511_88442)">
 				  <ellipse cx="614.5" cy="612.5" rx="114.5" ry="112.5" fill="#EF3E72" fill-opacity="0.6"/>
 				</g>
@@ -92,8 +92,8 @@
 		</div>
 
 		<!-- Clay Gradient Background fot Hero -->
-		<div class="absolute  left-[0px] pointer-events-none z-0 hidden md:block">
-	<svg xmlns="http://www.w3.org/2000/svg" width="741" height="1225" viewBox="0 0 741 1225" fill="none">
+		<div class="absolute left-0 top-0 pointer-events-none z-0 hidden md:block overflow-hidden">
+	<svg xmlns="http://www.w3.org/2000/svg" width="741" height="1225" viewBox="0 0 741 1225" fill="none" class="max-h-screen">
 		<g filter="url(#filter0_f_7511_88441)">
 		  <ellipse cx="126.5" cy="612.5" rx="114.5" ry="112.5" fill="#7CCCCA"/>
 		</g>
@@ -107,8 +107,8 @@
 	  </svg>
 </div>
 		<!-- Clay Gradient Background fot Products -->
-		<div class="absolute top-[760px] left-[0px] pointer-events-none z-0 hidden md:block">
-			<svg xmlns="http://www.w3.org/2000/svg" width="784" height="1225" viewBox="0 0 784 1225" fill="none">
+		<div class="absolute top-[760px] left-0 pointer-events-none z-0 hidden md:block overflow-hidden">
+			<svg xmlns="http://www.w3.org/2000/svg" width="784" height="1225" viewBox="0 0 784 1225" fill="none" class="max-h-screen">
 				<g filter="url(#filter0_f_7511_88452)">
 				  <ellipse cx="169.5" cy="612.5" rx="114.5" ry="112.5" fill="#7CCCCA"/>
 				</g>
@@ -123,8 +123,8 @@
 		</div>
 
 		<!-- Pink Gradient Background fot Follow Our Journey -->
-		<div class="absolute top-[2696px] left-[10%] pointer-events-none z-0 hidden md:block">
-			<svg xmlns="http://www.w3.org/2000/svg" width="1229" height="1225" viewBox="0 0 1229 1225" fill="none">
+		<div class="absolute top-[2696px] left-[10%] pointer-events-none z-0 hidden md:block overflow-hidden">
+			<svg xmlns="http://www.w3.org/2000/svg" width="1229" height="1225" viewBox="0 0 1229 1225" fill="none" class="max-h-screen">
 				<g filter="url(#filter0_f_7511_88699)">
 				  <ellipse cx="614.5" cy="612.5" rx="114.5" ry="112.5" fill="#EF3E72" fill-opacity="0.8"/>
 				</g>
@@ -139,8 +139,8 @@
 		</div>
 
 		<!-- Pink Gradient Background fot Follow Our Journey mobile -->
-		<div class="absolute top-[3600px] left-[0%] pointer-events-none z-0 block md:hidden">
-			<svg xmlns="http://www.w3.org/2000/svg" width="430" height="1225" viewBox="0 0 430 1225" fill="none">
+		<div class="absolute top-[3600px] left-0 pointer-events-none z-0 block md:hidden overflow-hidden">
+			<svg xmlns="http://www.w3.org/2000/svg" width="430" height="1225" viewBox="0 0 430 1225" fill="none" class="max-h-screen">
 				<g filter="url(#filter0_f_7578_1216)">
 				  <ellipse cx="214.5" cy="612.5" rx="114.5" ry="112.5" fill="#EF3E72" fill-opacity="0.8"/>
 				</g>
@@ -154,8 +154,8 @@
 			  </svg>
 		</div>
 		<!-- Yellow Gradient Background fot Where we are heading mobile -->
-		<div class="absolute top-[3000px] left-[0%] pointer-events-none z-0 block md:hidden flex-shrink-0">
-			<svg xmlns="http://www.w3.org/2000/svg" width="430" height="225" viewBox="0 0 430 1225" fill="none">
+		<div class="absolute top-[3000px] left-0 pointer-events-none z-0 block md:hidden flex-shrink-0 overflow-hidden">
+			<svg xmlns="http://www.w3.org/2000/svg" width="430" height="225" viewBox="0 0 430 1225" fill="none" class="max-h-screen">
 				<g filter="url(#filter0_f_7578_1214)">
 				  <ellipse cx="111.5" cy="612.5" rx="114.5" ry="112.5" fill="#FCE189" fill-opacity="0.6"/>
 				</g>
@@ -169,8 +169,8 @@
 			  </svg>
 		</div>
 		<!-- Yellow Gradient Background fot How we build mobile -->
-		<div class="absolute top-[3000px] left-[0%] pointer-events-none z-0 block md:hidden flex-shrink-0">
-			<svg xmlns="http://www.w3.org/2000/svg" width="430" height="225" viewBox="0 0 430 1225" fill="none">
+		<div class="absolute top-[3000px] left-0 pointer-events-none z-0 block md:hidden flex-shrink-0 overflow-hidden">
+			<svg xmlns="http://www.w3.org/2000/svg" width="430" height="225" viewBox="0 0 430 1225" fill="none" class="max-h-screen">
 				<g filter="url(#filter0_f_7578_1212)">
 				  <ellipse cx="214.5" cy="612.5" rx="114.5" ry="112.5" fill="#7CCCCA"/>
 				</g>
@@ -184,8 +184,8 @@
 			  </svg>
 		</div>
 		<!-- Yellow Gradient Background fot Hero mobile -->
-		<div class="absolute top-[500px] left-[0%] pointer-events-none z-0 block md:hidden flex-shrink-0">
-			<svg xmlns="http://www.w3.org/2000/svg" width="430" height="225" viewBox="0 0 430 1225" fill="none">
+		<div class="absolute top-[500px] left-0 pointer-events-none z-0 block md:hidden flex-shrink-0 overflow-hidden">
+			<svg xmlns="http://www.w3.org/2000/svg" width="430" height="225" viewBox="0 0 430 1225" fill="none" class="max-h-screen">
 				<g filter="url(#filter0_f_7578_1212)">
 				  <ellipse cx="214.5" cy="612.5" rx="114.5" ry="112.5" fill="#7CCCCA"/>
 				</g>
@@ -553,37 +553,5 @@
 <!-- Privacy Policy Modal -->
 <PrivacyPolicy bind:isVisible={showPrivacyPolicy} />
 
-
-
-<!-- <div class="hidden md:block w-[229px] h-[225px] absolute top-[526px] left-[1264px] right-[-53px] bottom-[3602px]">
-	<svg xmlns="http://www.w3.org/2000/svg" width="676" height="1225" viewBox="0 0 676 1225" fill="none">
-		<g filter="url(#filter0_f_7511_88442)">
-		  <ellipse cx="614.5" cy="612.5" rx="114.5" ry="112.5" fill="#EF3E72" fill-opacity="0.6"/>
-		</g>
-		<defs>
-		  <filter id="filter0_f_7511_88442" x="0" y="0" width="1229" height="1225" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-			<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-			<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-			<feGaussianBlur stdDeviation="250" result="effect1_foregroundBlur_7511_88442"/>
-		  </filter>
-		</defs>
-	  </svg>
-</div> -->
-
-
-<!-- <div class="hidden md:block w-[229px] h-[225px] absolute top-[3234px] left-[625px] right-[586px] bottom-[894px] rounded-full">
-	<svg xmlns="http://www.w3.org/2000/svg" width="676" height="1225" viewBox="0 0 676 1225" fill="none">
-		<g filter="url(#filter0_f_7511_88442)">
-		  <ellipse cx="614.5" cy="612.5" rx="114.5" ry="112.5" fill="#EF3E72" fill-opacity="0.6"/>
-		</g>
-		<defs>
-		  <filter id="filter0_f_7511_88442" x="0" y="0" width="1229" height="1225" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-			<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-			<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-			<feGaussianBlur stdDeviation="250" result="effect1_foregroundBlur_7511_88442"/>
-		  </filter>
-		</defs>
-	  </svg>
-</div> -->
 
 
