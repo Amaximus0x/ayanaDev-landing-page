@@ -479,7 +479,7 @@
 		</div>
 
 		<!-- Let's Talk Section -->
-		 <div class="relative mx-5 mt-16 bg-black/[0.03] rounded-lg flex ">
+		 <div class="relative mx-5 mt-16 md:mx-24 md:mt-[89.38px] bg-black/[0.03] rounded-lg flex ">
 			<div
 					class="absolute w-[203px] h-[203px] bottom-0 left-0 mb-[-42px]  flex-shrink-0 md:hidden"
 				>
