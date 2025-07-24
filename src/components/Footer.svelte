@@ -1,24 +1,16 @@
 <script lang="ts">
-	import { createEventDispatcher } from 'svelte';
-	
-	const dispatch = createEventDispatcher();
-
 	// Footer data
 	const apps = [
-		{ name: "RootCause", category: "Health & Wellness", url: "https://rootcause.my" },
-		{ name: "ExpatPass", category: "Travel Compliance", url: "https://expatpass.io" },
-		{ name: "Patent Trail", category: "Innovation Access", url: "https://patenttrail.com" },
-		{ name: "Youversity", category: "Education & Learning", url: "https://youversity.io" }
+		{ name: "RootCause", category: "Health & Wellness", url: "/products/rootcause" },
+		{ name: "ExpatPass", category: "Travel Compliance", url: "/products/expatpass" },
+		{ name: "Patent Trail", category: "Innovation Access", url: "/products/patenttrail" },
+		{ name: "Youversity", category: "Education & Learning", url: "/products/youversity" }
 	];
 
 	const socialLinks = [
 		{ name: "Twitter", url: "https://twitter.com/AyanaDevs" },
 		{ name: "LinkedIn", url: "https://www.linkedin.com/company/ayana-dev-studio" }
 	];
-
-	const handlePrivacyPolicyClick = () => {
-		dispatch('privacy-policy-click');
-	};
 </script>
 
 <footer class="relative w-full bg-light-bg-primary overflow-hidden">
@@ -110,11 +102,14 @@
 				</div>
 				
 				<!-- Connect Section -->
-				<div class="flex flex-col justify-start items-start gap-6 h-[114px]">
+				<div class="flex flex-col justify-start items-start gap-6">
 					<div class="self-stretch justify-start text-black text-h3-bold md:text-[24px] font-sans">
 						Connect
 					</div>
 					<div class="self-stretch flex flex-col justify-start items-start gap-4">
+						<a href="/about" class="self-stretch justify-start text-black text-base/[100%] font-normal font-sans">
+							About
+						</a>
 						<a href={socialLinks[0].url} class="self-stretch justify-start text-black text-base/[100%] font-normal font-sans">
 							{socialLinks[0].name}
 						</a>
@@ -133,12 +128,12 @@
             © 2025 Ayana Dev Studio
         </div>
         <div class="flex items-center gap-4 text-base/[30px] font-normal font-sans">
-            <button
-                on:click={handlePrivacyPolicyClick}
-                class="text-black hover:text-black transition-colors underline font-sans"
+            <a
+                href="#/privacy"
+                class="text-black hover:text-gray-600 transition-colors underline font-sans"
             >
                 Privacy Policy
-            </button>
+            </a>
         </div>
     </div>
 </footer> 
