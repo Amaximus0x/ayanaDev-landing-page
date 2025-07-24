@@ -23,7 +23,7 @@
 
 <footer class="relative w-full bg-light-bg-primary overflow-hidden">
 	<!-- Clay Gradient Background fot Footer mobile-->
-	<div class="absolute left-[50%] top-[30%] transform -translate-x-1/2 -translate-y-1/2 pointer-events-none flex-shrink-0 z-0 block md:hidden overflow-hidden">
+	<!-- <div class="absolute left-[50%] top-[30%] transform -translate-x-1/2 -translate-y-1/2 pointer-events-none flex-shrink-0 z-0 block md:hidden overflow-hidden">
 		<svg xmlns="http://www.w3.org/2000/svg" class="w-[1200px] h-[1200px]" viewBox="0 0 800 800" fill="none">
 			<g filter="url(#filter0_f_clay_mobile)">
 			  <ellipse cx="400" cy="400" rx="120" ry="120" fill="#7CCCCA" fill-opacity="0.15"/>
@@ -36,9 +36,9 @@
 			  </filter>
 			</defs>
 		  </svg>
-	</div>
+	</div> -->
 	<!-- Clay Gradient Background fot Footer web -->
-	<div class="absolute  pointer-events-none flex-shrink-0 z-0 hidden md:block">
+	<!-- <div class="absolute  pointer-events-none flex-shrink-0 z-0 hidden md:block">
 		<svg xmlns="http://www.w3.org/2000/svg" class="w-[445px] h-full" viewBox="0 0 764 727" fill="none">
 			<g filter="url(#filter0_f_7511_88701)">
 			  <ellipse cx="149.5" cy="612.5" rx="114.5" ry="112.5" fill="#7CCCCA"/>
@@ -51,9 +51,9 @@
 			  </filter>
 			</defs>
 		  </svg>
-	</div>
+	</div> -->
 	<!-- Yellow Gradient Background fot Footer -->
-	<div class="absolute right-0 pointer-events-none flex-shrink-0 z-0 hidden md:block">
+	<!-- <div class="absolute right-0 pointer-events-none flex-shrink-0 z-0 hidden md:block">
 		<svg xmlns="http://www.w3.org/2000/svg" class="w-[445px] h-full" viewBox="0 0 1005 797" fill="none">
 			<g filter="url(#filter0_f_7511_88703)">
 			  <ellipse cx="614.5" cy="612.5" rx="114.5" ry="112.5" fill="#FCE189" fill-opacity="0.6"/>
@@ -66,7 +66,7 @@
 			  </filter>
 			</defs>
 		  </svg>
-	</div>
+	</div> -->
 	<div class="relative z-10 w-full flex flex-col justify-center items-center mb-10 md:gap-14 px-5 md:px-[97px] pt-[98px] md:pt-[110px]">
 		<!-- Main Content -->
 		<div class="w-full max-w-7xl flex flex-col md:flex-row justify-center items-start md:items-center gap-8 md:gap-[159px] lg:gap-auto">
