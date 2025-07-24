@@ -15,11 +15,11 @@
 	};
 </script>
 
-<div class="max-w-[400px] max-h-[476px] p-2 rounded-2xl outline outline-1 outline-offset-[-1px] outline-black/5 inline-flex flex-col justify-start items-end gap-2.5">
+<div class="max-w-[400px] p-2 rounded-[18px] outline outline-1 outline-offset-[-1px] outline-black/5 inline-flex flex-col justify-start items-end gap-[11px] overflow-hidden">
 	<!-- Image Container -->
-	<div class="self-stretch h-56 relative  rounded-lg outline outline-1 outline-offset-[-1px] outline-black/5 overflow-hidden">
+	<div class="self-stretch h-56 relative rounded-lg outline outline-1 outline-offset-[-1px] outline-black/5 overflow-hidden">
 		<img 
-			class="w-[424.76px] h-[240.85px] object-cover" 
+			class="w-full h-full object-cover" 
 			src={imageUrl} 
 			alt={title}
 		/>
@@ -43,18 +43,16 @@
 				<div class="self-stretch justify-start text-black text-mini italic font-sans capitalize">
 					{description}
 				</div>
-				<div class="self-stretch flex flex-col justify-start items-start gap-1 pl-1.5">
-					<div class="self-stretch inline-flex justify-start items-center gap-4">
-						<div class="justify-start text-black text-small-xs font-sans capitalize">
-							<li>{availability}</li>
-						</div>
-					</div>
+				<ul class="self-stretch flex flex-col justify-start items-start gap-1 list-disc pl-5">
+					<li class="text-black text-small-xs font-sans capitalize marker:text-black">
+						{availability}
+					</li>
 					{#if stats}
-						<div class="self-stretch justify-start text-black text-small-xs font-sans capitalize">
-							<li>{stats}</li>
-						</div>
+						<li class="text-black text-small-xs font-sans capitalize marker:text-black">
+							{stats}
+						</li>
 					{/if}
-				</div>
+				</ul>
 			</div>
 		</div>
 		
