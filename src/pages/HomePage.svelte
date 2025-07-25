@@ -56,7 +56,7 @@
 	};
 
 	function handleGetInTouchClick() {
-		const email = 'team@ayanadevstudio.com';
+		const email = 'info@ayanadevstudio.com';
 		const mailtoLink = `mailto:${email}`;
 		
 		// For iOS Safari, use a different approach
