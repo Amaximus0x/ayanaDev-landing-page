@@ -1,8 +1,14 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import { push } from 'svelte-spa-router';
+  import { push, location } from 'svelte-spa-router';
   
   let isMobile = false;
+  let currentPath = '/';
+  
+  // Subscribe to location changes
+  location.subscribe(value => {
+    currentPath = value || '/';
+  });
   
   onMount(() => {
     const checkWidth = () => {
@@ -28,12 +34,38 @@
     }
   }
 
-  function scrollToProducts() {
-    scrollToSection('products-section');
+  function handleProductsClick() {
+    if (currentPath === '/') {
+      scrollToSection('products-section');
+    } else {
+      push('/');
+      setTimeout(() => {
+        scrollToSection('products-section');
+      }, 100);
+    }
   }
 
-  function scrollToContact() {
-    scrollToSection('contact-section');
+  function handleContactClick() {
+    const email = 'info@ayanadevstudio.com';
+    
+    try {
+      // Method 1: Create temporary anchor element (works best for iOS Safari)
+      const link = document.createElement('a');
+      link.href = `mailto:${email}`;
+      link.setAttribute('target', '_blank');
+      link.style.display = 'none';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } catch (error) {
+      // Fallback: Use window.open (works on most browsers)
+      try {
+        window.open(`mailto:${email}`, '_blank');
+      } catch (fallbackError) {
+        // Final fallback: Direct location change
+        window.location.href = `mailto:${email}`;
+      }
+    }
   }
 
   function navigateToHome() {
@@ -55,13 +87,13 @@
     
     <!-- Navigation -->
     <div class="flex justify-start items-center gap-[19px] md:gap-6">
-      <div class="text-center text-black text-small-medium md:text-small-medium-lg font-satoshi cursor-pointer" on:click={scrollToContact}>
+      <div class="text-center text-black text-small-medium md:text-small-medium-lg font-satoshi cursor-pointer" on:click={handleContactClick}>
         Contact Us
       </div>
-      <div class="px-4 py-2 md:px-6 md:py-4 bg-black rounded-lg flex justify-center items-center gap-2.5 md:w-[196.50px] cursor-pointer" on:click={scrollToProducts}>
+      <div class="px-4 py-2 md:px-6 md:py-4 bg-black rounded-lg flex justify-center items-center gap-2.5 md:w-[196.50px] cursor-pointer" on:click={handleProductsClick}>
         <div class="text-center text-white text-small-medium md:text-small-medium-lg font-satoshi">
           {#if isMobile}
-            our Apps
+            Our Apps
           {:else}
             Explore our Apps
           {/if}
