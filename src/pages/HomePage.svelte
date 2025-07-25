@@ -55,7 +55,47 @@
 		}
 	};
 
+	function handleGetInTouchClick() {
+		const email = 'team@ayanadevstudio.com';
+		const mailtoLink = `mailto:${email}`;
+		
+		// For iOS Safari, use a different approach
+		if (/iPad|iPhone|iPod/.test(navigator.userAgent) && /WebKit/.test(navigator.userAgent) && !/CriOS/.test(navigator.userAgent)) {
+			// Create a temporary anchor element for iOS
+			const link = document.createElement('a');
+			link.href = mailtoLink;
+			link.style.display = 'none';
+			document.body.appendChild(link);
+			link.click();
+			setTimeout(() => {
+				document.body.removeChild(link);
+			}, 100);
+		} else {
+			// For other browsers, use the standard approach
+			window.open(mailtoLink, '_self');
+		}
+	}
+
 </script>
+
+<style>
+	/* iOS-compatible gradient styles */
+	.gradient-blob {
+		will-change: transform;
+		backface-visibility: hidden;
+		-webkit-backface-visibility: hidden;
+		perspective: 1000px;
+		-webkit-perspective: 1000px;
+	}
+	
+	/* Fallback for older iOS versions */
+	@supports not (filter: blur(125px)) {
+		.gradient-blob > div {
+			background: radial-gradient(circle at center, currentColor 0%, transparent 50%) !important;
+			opacity: 0.2 !important;
+		}
+	}
+</style>
 
 <svelte:head>
 	<title>{title}</title>
@@ -70,6 +110,14 @@
 	<div class="relative pt-[1px] md:pt-[1px] overflow-hidden">
 		
 		<!-- Pink Gradient Background for Hero/Products -->
+		<div class="absolute w-[229px] h-[225px] top-[526px] left-[201px] rounded-full pointer-events-none z-0 gradient-blob md:hidden">
+			<div class="w-full h-full rounded-full bg-[#EF3E724D] opacity-30" style="filter: blur(125px); -webkit-filter: blur(125px); transform: translate3d(0,0,0); -webkit-transform: translate3d(0,0,0);"></div>
+		</div> 
+		<div class="absolute w-[229px] h-[225px] top-[582px] left-0 rounded-full pointer-events-none z-0 gradient-blob md:hidden">
+			<div class="w-full h-full rounded-full bg-[#7CCCCA] opacity-30" style="filter: blur(125px); -webkit-filter: blur(125px); transform: translate3d(0,0,0); -webkit-transform: translate3d(0,0,0);"></div>
+		</div>
+
+		
 		<div class="absolute right-0 top-0 pointer-events-none z-0 hidden md:block">
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 676 1225" fill="none" class="w-[676px] h-[1225px] max-h-screen">
 				<g filter="url(#filter0_f_7511_88442)">
@@ -131,6 +179,8 @@
 				</defs>
 			  </svg>
 		</div>
+
+		
 
 		<!-- Trusted By Section -->
 		<div
@@ -203,6 +253,11 @@
 				</div>
 			</div>
 		</div>
+
+		<!-- Pink Gradient Background for Products Section (Mobile) -->
+		<!-- <div class="absolute top-[4000px] left-[0px] pointer-events-none z-0 md:hidden">
+			<div class="w-[430px] h-[430px] rounded-full gradient-pink"></div>
+		</div> -->
 
 		<!-- Our Products Section -->
 		<div
@@ -287,6 +342,8 @@
 			</div>
 		</div>
 
+		
+
 		<!-- How we build Section -->
 		<div
 			class="flex flex-col justify-center items-center gap-6 md:gap-8 mx-5 md:ml-[97px] md:mr-[96px] mt-[71px] md:mt-[119px]"
@@ -347,7 +404,15 @@
 					/>
 				</div>
 		</div>
+		<div class="absolute w-[229px] h-[225px] top-[3236px] left-[68px] rounded-full pointer-events-none z-0 gradient-blob md:hidden">
+			<div class="w-full h-full rounded-full bg-[#7CCCCA] opacity-30" style="filter: blur(125px); -webkit-filter: blur(125px); transform: translate3d(0,0,0); -webkit-transform: translate3d(0,0,0);"></div>
+		</div>
 
+		<div class="absolute w-[229px] h-[225px] top-[3768px] left-[0px] rounded-full pointer-events-none z-0 gradient-blob md:hidden">
+			<div class="w-full h-full rounded-full bg-[#FCE18999] opacity-40" style="filter: blur(125px); -webkit-filter: blur(125px); transform: translate3d(0,0,0); -webkit-transform: translate3d(0,0,0);"></div>
+		</div>
+
+		
 		<!-- Follow Our Journey Section -->
 		<div
 			class="flex flex-col justify-center items-center gap-6 md:gap-8 mx-5 md:ml-[97px] md:mr-[96px] mt-[64px] md:mt-[95px]"
@@ -409,6 +474,13 @@
 			
 		</div>
 
+		<div class="absolute w-[229px] h-[225px] top-[4171px] left-[68px] rounded-full pointer-events-none z-0 gradient-blob md:hidden">
+			<div class="w-full h-full rounded-full bg-[#EF3E72CC] opacity-40" style="filter: blur(125px); -webkit-filter: blur(125px); transform: translate3d(0,0,0); -webkit-transform: translate3d(0,0,0);"></div>
+		</div>
+
+		
+
+
 		<!-- Let's Talk Section -->
 		 <div class="relative mx-5 mt-16 md:mx-24 md:mt-[89.38px] bg-black/[0.03] rounded-lg flex ">
 			<div
@@ -449,8 +521,10 @@
 						While focused on our own products, we're open to exploring unique collaborations.</p>
 				</div> 
 				
-				<a href="mailto:team@ayanadestudio.com">
-				<div class="px-3 py-2 md:px-6 md:py-4 bg-black rounded-lg inline-flex justify-center items-center gap-2.5">
+				<button 
+					class="px-3 py-2 md:px-6 md:py-4 bg-black rounded-lg inline-flex justify-center items-center gap-2.5 cursor-pointer hover:bg-gray-800 transition-colors"
+					on:click={handleGetInTouchClick}
+				>
 					<div class="text-center justify-start text-white text-[14px] md:text-[16px] font-medium font-sans capitalize">
 						Get in Touch</div>
 						<div class="w-6 h-6 relative overflow-hidden">
@@ -458,8 +532,7 @@
 								<path d="M18.7501 6.5625V16.3125C18.7501 16.5114 18.671 16.7022 18.5304 16.8428C18.3897 16.9835 18.199 17.0625 18.0001 17.0625C17.8011 17.0625 17.6104 16.9835 17.4697 16.8428C17.3291 16.7022 17.2501 16.5114 17.2501 16.3125V8.37281L6.53068 19.0931C6.38995 19.2339 6.19907 19.3129 6.00005 19.3129C5.80103 19.3129 5.61016 19.2339 5.46943 19.0931C5.3287 18.9524 5.24963 18.7615 5.24963 18.5625C5.24963 18.3635 5.3287 18.1726 5.46943 18.0319L16.1897 7.3125H8.25005C8.05114 7.3125 7.86037 7.23348 7.71972 7.09283C7.57907 6.95218 7.50005 6.76141 7.50005 6.5625C7.50005 6.36359 7.57907 6.17282 7.71972 6.03217C7.86037 5.89152 8.05114 5.8125 8.25005 5.8125H18.0001C18.199 5.8125 18.3897 5.89152 18.5304 6.03217C18.671 6.17282 18.7501 6.36359 18.7501 6.5625Z" fill="white"/>
 						  	</svg>
 						</div>
-					</div>
-				</a>
+				</button>
 			</div>
 
 			<div
@@ -474,6 +547,7 @@
 		 </div>
 		
 	</div>
+	
 </div>
 
 <!-- Footer -->

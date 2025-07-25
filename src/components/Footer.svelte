@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { push } from 'svelte-spa-router';
+	
 	// Footer data
 	const apps = [
 		{ name: "RootCause", category: "Health & Wellness", url: "/products/rootcause" },
@@ -11,10 +13,23 @@
 		{ name: "Twitter", url: "https://twitter.com/AyanaDevs" },
 		{ name: "LinkedIn", url: "https://www.linkedin.com/company/ayana-dev-studio" }
 	];
+	
+	function navigateToPrivacy(e: Event) {
+		e.preventDefault();
+		// Scroll to top first
+		window.scrollTo({ top: 0, behavior: 'instant' });
+		// Then navigate to privacy page
+		setTimeout(() => {
+			push('/privacy');
+		}, 10);
+	}
 </script>
 
 <footer class="relative w-full bg-light-bg-primary overflow-hidden">
 	<!-- Clay Gradient Background fot Footer mobile-->
+	<div class="absolute w-[229px] h-[225px] top-[0px] left-[35px] rounded-full pointer-events-none z-0 bg-[#7CCCCA] blur-[250px] md:hidden">
+		<img src="/ellipse-15.svg" alt="ellipse-15" class="w-full h-auto object-contain">
+	</div>
 	<!-- <div class="absolute left-[50%] top-[30%] transform -translate-x-1/2 -translate-y-1/2 pointer-events-none flex-shrink-0 z-0 block md:hidden overflow-hidden">
 		<svg xmlns="http://www.w3.org/2000/svg" class="w-[1200px] h-[1200px]" viewBox="0 0 800 800" fill="none">
 			<g filter="url(#filter0_f_clay_mobile)">
@@ -131,6 +146,7 @@
             <a
                 href="#/privacy"
                 class="text-black hover:text-gray-600 transition-colors underline font-sans"
+                on:click={navigateToPrivacy}
             >
                 Privacy Policy
             </a>
